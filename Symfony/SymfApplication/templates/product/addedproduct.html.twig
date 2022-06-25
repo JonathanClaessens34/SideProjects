@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Product{% endblock %}
+
+{% block body %}
+{% if products %}
+    <ul>{% for product in products %}
+        <li>[{{product.id|e}}]  {{product.name|e}}  {{product.price|e}}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+{% endblock %}

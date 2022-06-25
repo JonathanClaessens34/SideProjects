@@ -1,0 +1,32 @@
+# common
+.DS_Store
+*.log
+tmp/
+temp/
+
+# common - Jetbrains
+.idea
+*.iml
+.ipr
+*.iws
+*.suo
+
+# common - Visual Studio Code
+.vscode/
+.history/
+*.vsix
+*.sln
+*.sw?
+
+# backend
+target/
+build/
+out/
+
+# frontend
+node_modules
+/dist
+
+# application
+application.properties
+tokens/StoredCredential

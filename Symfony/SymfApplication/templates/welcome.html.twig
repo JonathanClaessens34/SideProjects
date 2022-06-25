@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Welkom{% endblock %}
+
+{% block body %}
+    <div class="row m-5">
+        <div class="col-md-6 col-sm-12 vertical">
+            <div class="flex">
+                <h1 class="titel fw-bolder">ProductShop AON10</h1>
+            </div>
+            <div class="flex">
+                <p class="fw-normal fst-italic">Koop hier je spullen voor moederdag!</p>
+            </div>
+        </div>
+        <section class="col-md-6 gallery">
+            <div class="container-lg">
+                <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-2">
+                    <div class="col">
+                        <div class="flex">
+                            <img src="{{asset('images/spongebob.jpg')}}" alt="spongebob"/>
+                        </div>
+                        <div class="flex">
+                            <p>Glenn Noelmans</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="flex">
+                            <img src={{asset('images/octo.png')}} alt="octo"/>
+                        </div>
+                        <div class="flex">
+                            <p>Jonas Goossens</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="flex">
+                            <img src="{{asset('images/patrick.png')}}" alt="patrick"/>
+                        </div>
+                        <div class="flex">
+                            <p>Jonathan Claessens</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="flex">
+                            <img src="{{asset('images/krabs.png')}}" alt="krabs"/>
+                        </div>
+                        <div class="flex">
+                            <p>Niel Peetersem</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+{% endblock %}
+

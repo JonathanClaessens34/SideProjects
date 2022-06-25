@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Products{% endblock %}
+
+{% block javascripts %}
+<script type="text/javascript">
+function click() {
+    var nameProductText = document.getElementById("nameSearch").value;
+    console.log("hello");
+    window.location.href = "www.google.com"; //'{{url('searchProduct')}}?name={{' + nameProductText + '}}'
+}
+</script>
+{% endblock %}
+
+{% block body %}
+<form action="{{path('searchProduct')}}">
+<label for="html">Name</label><br>
+<input type="text" name="name"></input>
+<input type="submit" value="Search"></button>
+</form>
+
+{% if products %}
+    <ul class="card">
+    {% for product in products %}
+            <li class="card-title">[{{product.id|e}}]  {{product.name|e}}  {{product.price|e}}</li>
+            <a href="{{url('edit_product')}}?id={{product.id}}" class="btn btn-light" style="width: 20%;">Edit</a><br>
+            <a href="{{url('deleteproduct')}}?id={{product.id}}" class="btn btn-dark" style="width: 20%;">Delete</a><br>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+{% endblock %}

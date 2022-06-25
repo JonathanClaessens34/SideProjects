@@ -1,0 +1,702 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Source+Code+Pro:400"); /*Importeert Fonts via google*/
+
+    /*Zorgt dat alle elementen deze standaardwaarden hebben*/
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+
+    /*Zorgt dat er geen opsommingsteken getoond word*/
+	ol, ul {
+		list-style: none;
+	}
+
+    /*Zorgt dat tabellen geen witruimte tussen elkaar laten*/
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
+/* Containers */
+
+    /*Container is een class dat alle elementen omvat*/
+    /*Zorgt ervoor dat het element gecentreerd wordt en de breedte heeft van 85% van de pagina*/
+	.container {
+		margin-left: auto;
+		margin-right: auto;
+        width: 60%;
+	}
+
+    /*@media screen verwijst naar de sherm van de gebruiker*/
+    /* and (max-width: ___ ) voert de code uit wanneer de scherm van de gebruiker <= max-width*/
+	@media screen and (max-width: 1680px) {
+
+		.container {
+			width: 70%;
+		}
+
+	}
+
+	@media screen and (max-width: 736px) {
+
+		.container {
+			width: 80%;
+		}
+
+	}
+
+/* Basic */
+
+	body {
+		background: #fff; /*Wit*/
+	}
+
+   /*Button*/ 
+   .btn {
+       text-align: center;
+       margin: 50% 0;
+    }
+
+    .btn button {
+      border-radius: 9px;
+      font-family: Arial;
+      color: #fff2ff;
+      font-size: 34px;
+      background: #34b290;
+      padding: 10px 20px 10px 20px;
+      text-decoration: none;
+    }
+    
+    .btn button :hover {
+      background: #4acaa8;
+    }
+
+    /*Geeft de tekst op de pagina een standaard waarde*/
+	body, input, select, textarea {
+		color: #888; /*Grijs*/
+		font-family: "Lato", sans-serif;
+		font-size: 13pt;
+		font-weight: 400;
+		line-height: 1.75em;
+	}
+
+    /*Vetgedrukte tekst*/
+	strong, b {
+		color: #777;
+		font-weight: 700;
+	}
+
+    /*Schuine tekst*/
+	em, i {
+		font-style: italic;
+	}
+
+    /*Alinea*/
+	p {
+		margin: 0 0 2.25em 0; /*Ruimte onderaan vergroten*/
+	}
+
+    /*Headers(koppen)*/
+	h1, h2, h3, h4, h5, h6 {
+		color: #777;
+		font-weight: 700;
+		line-height: 1em;
+		margin: 0 0 0.5625em 0;
+	}
+        /*Hyperlinks in de headers*/
+		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+			border: 0;
+			color: inherit;
+			text-decoration: none;
+		}
+
+	h2 {
+		font-size: 2em;
+		line-height: 1.5em;
+	}
+
+	h3 {
+		font-size: 1.75em;
+		line-height: 1.5em;
+	}
+
+	h4 {
+		font-size: 1.25em;
+		line-height: 1.5em;
+	}
+
+	h5 {
+		font-size: 0.9em;
+		line-height: 1.5em;
+	}
+
+	h6 {
+		font-size: 0.7em;
+		line-height: 1.5em;
+	}
+
+    /*Lijn*/
+	hr {
+		border: 0;
+		border-bottom: solid 2px #f4f4f4;
+		margin: 2.25em 0;
+	}
+
+		hr.major {
+			margin: 3.375em 0;
+		}
+
+    /*Plaatst tekst links*/
+	.align-left {
+		text-align: left;
+	}
+
+    /*Plaatst tekst in het midden*/
+	.align-center {
+		text-align: center;
+	}
+
+    /*Plaatst tekst rechts*/
+	.align-right {
+		text-align: right;
+	}
+
+/* Section/Article */
+    
+	section.special, article.special {
+		text-align: center;
+	}
+
+	header h4 + p,
+	header h5 + p,
+	header h6 + p {
+		font-size: 0.9em;
+		margin-top: -0.25em;
+		line-height: 1.5em;
+	}
+
+	header.major h2 {
+		color: #4acaa8;
+		font-size: 3.5em;
+	}
+
+		header.major h2 + p {
+			color: #777;
+			font-size: 1.75em;
+			font-weight: 700;
+			margin-top: -0.75em;
+		}
+
+/* Image */
+
+    
+    /*inline-block zorgt ervoor dat de elementen in lijn en in blok worden getoond*/
+    /*relative zorgt ervoor dat het element relatief is tegenover de pagina en geen rekening houdt met andere elementen*/
+	.image {
+		display: inline-block;
+		position: relative;
+	}
+        /*Zorgt dat elke foto ronde hoeken heeft*/
+        /*display: block zorgt ervoor dat de foto als een aparte element getoond word*/
+		.image img {
+			border-radius: 5px;
+			display: block;
+		}
+
+		.image.left {
+			float: left;
+			margin: 0 2.5em 2em 0;
+			top: 0.25em;
+		}
+
+		.image.right {
+			float: right;
+			margin: 0 0 2em 2.5em;
+			top: 0.25em;
+		}
+
+		.image.fit {
+			display: block;
+			margin: 0 0 2.25em 0;
+			width: 100%;
+		}
+
+			.image.fit img {
+				display: block;
+				width: 100%;
+			}
+
+        /*Overflow: hiddden zorgt ervoor dat je niet kan scrollen als er niet genoeg plaats is binnen de element voor de content*/
+		.image.avatar {
+			overflow: hidden;
+		}
+            /*Border-radius zorgt dat de foto bolvormig wordt*/
+			.image.avatar img {
+				border-radius: 100%;
+				display: block;
+				width: 100%;
+			}
+
+/* Image 1*/
+
+	.image1 {
+		border-radius: 5px;
+		display: inline-block;
+		position: relative;
+	}
+
+		.image1 img {
+			border-radius: 5px;
+			display: block;
+            height: 100%;
+            width: auto;
+		}
+
+		.image1.left {
+			float: left;
+			margin: 0 2.5em 2em 0;
+			top: 0.25em;
+		}
+
+		.image1.right {
+			float: right;
+			margin: 0 0 2em 2.5em;
+			top: 0.25em;
+		}
+
+		.image1.fit {
+			display: block;
+			margin: 0 0 2.25em 0;
+			width: 100%;
+		}
+
+			.image1.fit img {
+				display: block;
+				width: 100%;
+			}
+
+		.image1.avatar {
+			border-radius: 100%;
+			overflow: hidden;
+		}
+
+			.image1.avatar img {
+				border-radius: 100%;
+				display: block;
+				width: 100%;
+			}
+
+/* List */
+
+    /*Geordende lijst*/
+	ol {
+		list-style: decimal;
+		margin: 0 0 2.25em 0;
+		padding-left: 1.25em;
+	}
+
+		ol li {
+			padding-left: 0.25em;
+		}
+
+    /*Ongeordende lijst*/
+	ul {
+		list-style: disc;/*Opsommingsteken bol*/
+		margin: 0 0 2.25em 0;
+		padding-left: 1em;
+	}
+
+		ul li {
+			padding-left: 0.5em;
+		}
+
+/* Features */
+	.features article {
+		border-top: solid 3px #f4f4f4;
+		margin-bottom: 2.25em;
+		padding-top: 2.25em;
+	}
+        /*Selecteert de eerste element*/
+        /*Zorgt dat er geen witruimte bovenaan komt*/
+		.features article:first-child {
+			border-top: 0;
+			padding-top: 0;
+		}
+
+        /*Display: inline-block zorgt ervoor dat het als een block element inline geplaatst wordt*/
+        /*Hiermee kan je meer wijzigingen toevoegen*/
+		.features article .image {
+			display: inline-block;
+			padding-right: 2.5em;
+			vertical-align: middle;
+			width: 55%;
+		}
+
+			.features article .image img {
+				display: block;
+				width: 35%;
+                height: auto;
+			}
+
+        .features article .image1 {
+			display: inline-block;
+			padding-right: 2.5em;
+			vertical-align: middle;
+			width: 35%;
+		}
+
+			.features article .image1 img {
+				display: block;
+				width: 35%;
+                height: auto;
+			}
+
+		.features article .inner {
+			display: inline-block;
+			vertical-align: middle;
+			width: 35%;
+		}
+            /*Selecteert de laatste element dat in de klasse inner moet zitten*/
+			.features article .inner > :last-child {
+				margin-bottom: 0;
+			}
+
+/* Header / Navigatie rechts */
+	#header {
+		background: #4acaa8;
+		color: #d1f1e9;
+		height: 100%;
+		overflow-y: auto;
+		position: fixed;
+		text-align: center;
+		top: 0;
+		width: 20%;
+		right: 0;
+	}
+        
+		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
+			color: #ffffff;
+		}
+
+			#header h1 a, #header h2 a, #header h3 a, #header h4 a, #header h5 a, #header h6 a {
+				color: #ffffff;
+			}
+
+		#header header p {
+			color: #b6e9dc;
+		}
+
+		#header a {
+			color: #d1f1e9;
+		}
+
+			#header a:hover {
+				color: #ffffff !important;
+			}
+
+		#header > header {
+			padding: 3em;
+		}
+
+			#header > header .avatar {
+				display: block;
+				margin: 0 auto 2.25em auto;
+				width: 8em;
+			}
+
+			#header > header h1 {
+				font-size: 1.75em;
+				margin: 0;
+			}
+
+			#header > header p {
+				color: #d1f1e9;
+				font-style: italic;
+				margin: 1em 0 0 0;
+			}
+
+		#header > footer {
+			bottom: 0;
+			left: 0;
+			padding: 2em;
+			width: 80%;
+		}
+
+			#header > footer .icons {
+				margin: 0;
+			}
+
+				#header > footer .icons li a {
+					color: #b6e9dc;
+				}
+
+		#header > nav {
+
+		}
+
+			#header > nav ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+
+				#header > nav ul li {
+					border-top: solid 2px #5ccfb0;
+					display: block;
+					padding: 0;
+				}
+
+					#header > nav ul li a {
+						color: #ffffff !important;
+						display: block;
+						padding: 0.85em 0;
+						text-decoration: none;
+					}
+
+                        /*Duidt de geselecteerde aan*/
+						#header > nav ul li a.active {
+							background: #fff;/*Wit*/
+							color: #4acaa8 !important;/*Verwijst naar de kleur van de letter*/
+						}
+
+					#header > nav ul li:first-child {
+						border-top: 0;
+					}
+
+/* Wrapper */
+    /*Bevat alles van de body behalve de header en footer*/
+	#wrapper {
+		background: #fff;
+		padding-right: 23em;
+	}
+
+/* Main */
+
+	#main > section {
+		border-top: solid 6px #f4f4f4;
+	}
+
+		#main > section > .container {
+			padding: 6em 0 4em 0;
+		}
+
+		#main > section:first-child {
+			border-top: 0;
+		}
+
+/* Footer */
+
+	#footer {
+		background: #fafafa;
+		border-top: 0;
+		color: #c0c0c0;
+		overflow: hidden;/*Zorgt ervoor dat je niet kan scrollen als er te weinig plaats voor de tekst binnen de element*/
+		padding: 4em 0 1em 0;
+        text-align:center;
+	}
+
+/* XLarge */
+
+	@media screen and (max-width: 1680px) {
+
+		/* Basic */
+
+			body, input, select, textarea {
+				font-size: 13pt;
+			}
+
+		/* Header */
+
+			#header {
+				width: 21em;
+			}
+
+				#header > header {
+					padding: 2em;
+				}
+
+				#header > footer {
+					padding: 1.5em;
+				}
+
+		/* Wrapper */
+
+			#wrapper {
+				padding-right: 21em;
+			}
+
+		/* Main */
+
+			#main > section > .container {
+				padding: 4em 0 2em 0;
+			}
+
+	}
+
+/* Large */
+
+	@media screen and (max-width: 1280px) {
+
+		/* Basic */
+
+			body, input, select, textarea {
+				font-size: 11pt;
+			}
+
+		/* Header */
+
+			#header {
+				width: 20em;
+			}
+
+		/* Wrapper */
+
+			#wrapper {
+				padding-right: 20em;
+			}
+
+	}
+
+/* Medium */
+
+	#titleBar {
+		display: none;
+	}
+
+@media screen and (max-width: 1024px) {
+
+    /* Basic */
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+    body, input, select, textarea {
+        font-size: 12pt;
+    }
+
+    /* Image */
+
+    .image.left, .image.right {
+        max-width: 40%;
+    }
+
+        .image.left img, .image.right img {
+            width: 10%;
+        }
+
+    /* Header */
+
+    #header {
+        width: 25%;
+    }
+
+    .container {
+			width: 110%;
+		}
+
+    /* Small */
+
+    @media screen and (max-width: 736px) {
+
+        /*Container*/
+        .container {
+			width: 130%;
+		}
+
+        /* Basic */
+
+        body, input, select, textarea {
+            font-size: 12pt;
+        }
+
+        h1 br, h2 br, h3 br, h4 br, h5 br, h6 br {
+            display: none;
+        }
+
+        h2 {
+            font-size: 1.75em;
+        }
+
+        h3 {
+            font-size: 1.5em;
+        }
+
+        h4 {
+            font-size: 1em;
+        }
+
+        /* Image */
+
+        .image.left {
+            margin: 0 1.5em 1em 0;
+        }
+
+        .image.right {
+            margin: 0 0 1em 1.5em;
+        }
+
+        /* Section/Article */
+
+        header br {
+            display: none;
+        }
+
+        header.major h2 {
+            font-size: 2.5em;
+        }
+
+            header.major h2 + p {
+                font-size: 1.5em;
+            }
+
+        /* Features */
+
+        .features article .image {
+            display: block;
+            margin: 0 0 2.25em 0;
+            padding-right: 0;
+            width: 100%;
+        }
+
+        .features article .inner {
+            display: block;
+            width: 100%;
+        }
+
+        /* One */
+
+        #one:before {
+            height: 7em;
+        }
+
+        /* Footer */
+
+        #footer {
+            text-align: left;
+        }
+
+            #footer .copyright li {
+                border-left: 0;
+                display: block;
+                line-height: 1.75em;
+                margin: 0.75em 0 0 0;
+                padding-left: 0;
+            }
+
+                #footer .copyright li:first-child {
+                    margin-top: 0;
+                }
+    }
+
+    @media screen and (max-width: 480px) {
+
+        body, input, select, textarea {
+            font-size: 12pt;
+        }
+    }
+}
